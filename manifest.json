@@ -1,13 +1,13 @@
 {
   "browser_specific_settings": { 
     "gecko": { 
-      "id": "buildkite_retry-all@applied.co",
+      "id": "buildkite-retry-all@applied.co",
       "strict_min_version": "42.0"
     } 
   },
   "name": "Buildkite Retry-All",
   "version": "0.0.2",
-  "description": "Retry all failed Buildkite jobs en masse for a build",
+  "description": "Retry all failed Buildkite jobs en masse for a build and easily copy job error reports",
   "permissions": [
     "*://buildkite.com/*",
     "activeTab",
