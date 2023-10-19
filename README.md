@@ -1,31 +1,31 @@
-# buildkite retry
+# Buildkite Retry-All for Firefox
 
-Here’s a Chrome extension with some useful Buildkite workflow shortcuts, currently including a button to retry all failed tests on your current buildkite page and a way to quickly report test-infra issues.
-DISCLAIMER please retry responsibly and only use if you know that your tests are flaking due to reasons unrelated to your changes :slightly_smiling_face:
+Forked from [Stef's Chrome extension](https://github.com/sren-applied/buildkite-retry-applied) for **Firefox Developer Edition** compatibility. Allows for retrying failed Buildkite runs en masse and easily copying errors for test infra. 
 
 ## Installation
 
-1. Clone this repo.
+1. Clone this repo
 
-2. Navigate to, chrome://extensions/
+2. Navigate to [about:config](about:config) in Firefox
 
-3. Enable "Developer mode"
+3. Set `xpinstall.signatures.required` to `false`*
 
-4. Click "Load unpacked"
+4. Zip the **contents** of the repo (not the top level folder itself)
 
-5. Select this repo and click "Open"
+5. Navigate to [about:addons](about:addons) in Firefox
+
+6. Drag the zip into the page and click through confirmation pop-ups. Done!
+
+\* only works in Firefox Developer Edition, which you should be using anyways over the Snap version if you are on Ubuntu.
 
 ## Usage
 
 ### Retry failed builds
-1. Navigate to webpage of the build (https://buildkite.com/$BUILDKITE_ORGANIZATION_SLUG/$BUILDKITE_PIPELINE_SLUG/builds/$BUILDKITE_BUILD_NUMBER)
+1. Navigate to webpage of the build (https://buildkite.com/$BUILDKITE_ORGANIZATION_SLUG/$BUILDKITE_PIPELINE_SLUG/builds/$BUILDKITE_BUILD_NUMBER).
 
 2. If enabled correctly, the extension will add a "Retry Failed" button to the page.
-![retry-failed](retry-failed.png)
 
 ### Copy issues to eng-test-infra
 1. Select the text of the failing test that you'd like to include in your error report.
 
 2. Right-click and then select "Copy report with error..." from the dropdown.
-
-![copy-report](copy-report.png)

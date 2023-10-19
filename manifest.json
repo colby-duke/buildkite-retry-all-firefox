@@ -1,15 +1,20 @@
 {
+  "browser_specific_settings": { 
+    "gecko": { 
+      "id": "buildkite_retry@applied.co",
+      "strict_min_version": "42.0"
+    } 
+  },
   "name": "Buildkite Retry-All",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Retry all failed buildkite tests on a page",
   "permissions": [
     "*://buildkite.com/*",
     "activeTab",
-    "contextMenus",
-    "declarativeContent"
+    "contextMenus"
   ],
   "icons": {
-    "16": "clipboard-red.png"
+    "16": "icon.png"
   },
   "content_scripts": [
     {
